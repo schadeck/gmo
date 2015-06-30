@@ -1,0 +1,15 @@
+{
+  "name": "gmo",
+  "version": "0.0.1",
+  "description": "gulp mithril open",
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "author": "Meshak Daniel",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.7.13",
+    "gulp": "^3.9.0",
+    "require-dir": "^0.3.0"
+  }
+}
