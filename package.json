@@ -11,8 +11,8 @@
     "start": "gulp watch"
   },
   "author": "Meshak Daniel",
-  "license": "MIT",
   "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
     "browser-sync": "^2.7.13",
     "browserify": "^10.2.4",
     "browserify-shim": "^3.8.9",
@@ -25,6 +25,7 @@
     "gulp-jade": "^1.0.1",
     "gulp-minify-css": "^1.2.0",
     "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^5.1.9",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-stylus": "^2.0.5",

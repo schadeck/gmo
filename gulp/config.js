@@ -1,40 +1,34 @@
-var dest = './dist',
+var dest = './build',
     src = './src';
 
 module.exports = {
-
+    // Serve build folder.
     browserSync: {
         server: {
-            baseDir: dest,
-            notify: false
-        }
+            baseDir: dest
+        },
+        notify: false
     },
 
+    // CSS Preprocessor
+    postcss: {
+        src: src + "/css/**/*.styl",
+        dest: dest
+    },
+
+    // HTML Preprocessor
+    jade: {
+        src: src + "/**/*.jade",
+        dest: dest
+    },
+
+    // Browserify Settings
     browserify: {
-        // A separate bundle will be generated for each
-        // bundle config in the list below
         bundleConfigs: [{
-            entries: src + '/javascript/global.coffee',
+            entries: src + '/javascript/main.js',
             dest: dest,
-            outputName: 'global.js',
-            // Additional file extentions to make optional
-            extensions: ['.coffee', '.hbs'],
-            // list of modules to make require-able externally
-            require: ['jquery', 'backbone/node_modules/underscore']
-                // See https://github.com/greypants/gulp-starter/issues/87 for note about
-                // why this is 'backbone/node_modules/underscore' and not 'underscore'
-        }, {
-            entries: src + '/javascript/page.js',
-            dest: dest,
-            outputName: 'page.js',
-            // list of externally available modules to exclude from the bundle
+            outputName: 'main.js',
             external: ['jquery', 'underscore']
         }]
-    },
-    
-    production: {
-        cssSrc: dest + '/*.css',
-        jsSrc: dest + '/*.js',
-        dest: dest
     }
 };

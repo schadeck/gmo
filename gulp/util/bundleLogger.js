@@ -3,7 +3,6 @@ var gutil = require('gulp-util'),
     startTime;
 
 module.exports = {
-    // Provides gulp style logs to the bundle method in browserify.js
     start: function(filepath) {
         startTime = process.hrtime();
         gutil.log('Bundling', gutil.colors.green(filepath) + '...');

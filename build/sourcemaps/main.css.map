@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.styl","main.css"],"names":[],"mappings":"AAEA;EACC,YAAA;EACA,oBAAA;CCDA","file":"main.css","sourcesContent":["$test = #fff\n\nh1\n\tcolor $test\n\tbackground rgba(teal, 1)","h1 {\n  color: #fff;\n  background: #008080;\n}\n"],"sourceRoot":"/source/"}
