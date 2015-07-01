@@ -1,7 +1,12 @@
 {
   "name": "gmo",
   "version": "0.0.1",
-  "description": "gulp mithril open",
+  "license": "MIT",
+  "description": "gulp mithril optimization",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shakdaniel/gmo.git"
+  },
   "scripts": {
     "start": "gulp watch"
   },

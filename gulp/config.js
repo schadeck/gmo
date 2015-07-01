@@ -2,12 +2,14 @@ var dest = './dist',
     src = './src';
 
 module.exports = {
+
     browserSync: {
         server: {
             baseDir: dest,
             notify: false
         }
     },
+
     browserify: {
         // A separate bundle will be generated for each
         // bundle config in the list below
@@ -29,6 +31,7 @@ module.exports = {
             external: ['jquery', 'underscore']
         }]
     },
+    
     production: {
         cssSrc: dest + '/*.css',
         jsSrc: dest + '/*.js',
