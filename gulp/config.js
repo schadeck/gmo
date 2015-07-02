@@ -1,3 +1,5 @@
+var historyApiFallback = require('connect-history-api-fallback');
+
 var dest = './build',
     src = './src';
 
@@ -5,7 +7,8 @@ module.exports = {
     // Serve build folder.
     browserSync: {
         server: {
-            baseDir: dest
+            baseDir: dest,
+            middleware: [historyApiFallback()]
         },
         notify: false
     },
@@ -33,10 +36,10 @@ module.exports = {
     browserify: {
         debug: true,
         bundleConfigs: [{
-            entries: src + '/js/main.js',
+            entries: src + '/js/app.js',
             dest: dest + '/js',
-            outputName: 'main.js',
-            external: ['jquery', 'underscore']
+            outputName: 'app.js',
+            external: ['jquery']
         }]
     },
 

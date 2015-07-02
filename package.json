@@ -1,66 +1,67 @@
 {
-    "name": "gmo",
-    "version": "0.0.1",
-    "license": "MIT",
-    "author": "Meshak Daniel <daniel.meshak@gmail.com>",
-    "description": "gulp mithril optimization",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/shakdaniel/gmo.git"
-    },
-    "scripts": {
-        "prestart": "npm install",
-        "start": "gulp"
-    },
-    "browserify": {
-        "transform": [
-            "browserify-shim"
-        ]
-    },
-    "browserify-shim": {
-        "plugin": {
-            "exports": "plugin",
-            "depends": [
-                "jquery:$"
-            ]
-        }
-    },
-    "author": "Meshak Daniel",
-    "devDependencies": {
-        "autoprefixer-core": "^5.2.1",
-        "browser-sync": "^2.7.13",
-        "browserify": "^10.2.4",
-        "browserify-shim": "^3.8.9",
-        "css-mqpacker": "^3.1.0",
-        "csswring": "^3.0.5",
-        "gulp": "^3.9.0",
-        "gulp-changed": "^1.2.1",
-        "gulp-filesize": "0.0.6",
-        "gulp-iconfont": "^3.0.2",
-        "gulp-imagemin": "^2.3.0",
-        "gulp-jade": "^1.0.1",
-        "gulp-jscs": "^1.6.0",
-        "gulp-jshint": "^1.11.1",
-        "gulp-minify-css": "^1.2.0",
-        "gulp-notify": "^2.2.0",
-        "gulp-postcss": "^5.1.9",
-        "gulp-rename": "^1.2.2",
-        "gulp-sourcemaps": "^1.5.2",
-        "gulp-stylus": "^2.0.5",
-        "gulp-uglify": "^1.2.0",
-        "gulp-util": "^3.0.6",
-        "imagemin-pngquant": "^4.1.0",
-        "jshint-stylish": "^2.0.1",
-        "lodash": "^3.10.0",
-        "lost": "^6.4.0",
-        "merge-stream": "^0.1.8",
-        "mithril": "^0.2.0",
-        "mocha": "^2.2.5",
-        "pretty-hrtime": "^1.0.0",
-        "require-dir": "^0.3.0",
-        "vinyl-source-stream": "^1.1.0",
-        "watchify": "^3.2.3",
-        "wiredep": "^2.2.2",
-        "jquery": "^2.1.4"
+  "name": "gmo",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Meshak Daniel",
+  "description": "gulp mithril optimization",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shakdaniel/gmo.git"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "gulp"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "plugin": {
+      "exports": "plugin",
+      "depends": [
+        "jquery:$"
+      ]
     }
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "browser-sync": "^2.7.13",
+    "browserify": "^10.2.4",
+    "browserify-shim": "^3.8.9",
+    "connect-history-api-fallback": "^1.1.0",
+    "css-mqpacker": "^3.1.0",
+    "csswring": "^3.0.5",
+    "domready": "^1.0.8",
+    "gulp": "^3.9.0",
+    "gulp-changed": "^1.2.1",
+    "gulp-filesize": "0.0.6",
+    "gulp-iconfont": "^3.0.2",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jade": "^1.0.1",
+    "gulp-jscs": "^1.6.0",
+    "gulp-jshint": "^1.11.1",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^5.1.9",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-stylus": "^2.0.5",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "imagemin-pngquant": "^4.1.0",
+    "jquery": "^2.1.4",
+    "jshint-stylish": "^2.0.1",
+    "lodash": "^3.10.0",
+    "lost": "^6.4.0",
+    "merge-stream": "^0.1.8",
+    "mithril": "^0.2.0",
+    "mocha": "^2.2.5",
+    "pretty-hrtime": "^1.0.0",
+    "require-dir": "^0.3.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.3",
+    "wiredep": "^2.2.2"
+  }
 }
