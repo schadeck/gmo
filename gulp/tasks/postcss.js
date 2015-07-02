@@ -2,15 +2,23 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     sourcemaps = require('gulp-sourcemaps'),
     stylus = require('gulp-stylus'),
-    postcss = require('gulp-postcss'),
-    autoprefixer = require('autoprefixer-core'),
     handleErrors = require('../util/handleErrors'),
     config = require('../config').postcss;
+
+// PostCSS
+var postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer-core'),
+    mqpacker = require('css-mqpacker'),
+    csswring = require('csswring'),
+    lost = require('lost');
 
 var processors = [
     autoprefixer({
         browsers: ['last 5 version']
-    })
+    }),
+    mqpacker,
+    csswring,
+    lost
 ];
 
 gulp.task('postcss', function() {

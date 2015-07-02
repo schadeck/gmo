@@ -10,25 +10,40 @@ module.exports = {
         notify: false
     },
 
-    // CSS Preprocessor
+    // CSS
     postcss: {
-        src: src + "/css/**/*.styl",
-        dest: dest
+        src: src + '/css/*.styl',
+        dest: dest + '/css'
     },
 
-    // HTML Preprocessor
+    // Images
+    images: {
+        src: src + '/img/*',
+        dest: dest + '/img'
+    },
+
+    // HTML
     jade: {
-        src: src + "/**/*.jade",
+        src: src + '/*.jade',
         dest: dest
     },
 
     // Browserify Settings
     browserify: {
+        debug: true,
         bundleConfigs: [{
-            entries: src + '/javascript/main.js',
-            dest: dest,
+            entries: src + '/js/main.js',
+            dest: dest + '/js',
             outputName: 'main.js',
             external: ['jquery', 'underscore']
         }]
+    },
+
+    // Production
+    production: {
+        cssSrc: dest + '/css/*.css',
+        jsSrc: dest + '/js/*.js',
+        cssDest: dest + '/css',
+        jsDest: dest + '/js'
     }
 };

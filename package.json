@@ -10,12 +10,41 @@
   "scripts": {
     "start": "gulp watch"
   },
+  "//": [
+    "The following 'underscore' example demonstrates exposing a module included ",
+    "by another module. If you were to npm install underscore separately and ",
+    "require('underscore'), you'd end up with two copies in your bundle. The one",
+    "you installed, and the one that shipped with another package (backbone in ",
+    "this example). This is an edge case and should rarely happen.",
+    "",
+    "The 'plugin' example makes that file requireable with `require('plugin')`,",
+    "and available to browserify-shim as 'plugin' on line 30."
+  ],
+  "browser": {
+    "underscore": "backbone/node_modules/underscore",
+    "plugin": "./src/javascript/vendor/jquery-plugin.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "plugin": {
+      "exports": "plugin",
+      "depends": [
+        "jquery:$"
+      ]
+    }
+  },
   "author": "Meshak Daniel",
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
     "browser-sync": "^2.7.13",
     "browserify": "^10.2.4",
     "browserify-shim": "^3.8.9",
+    "css-mqpacker": "^3.1.0",
+    "csswring": "^3.0.5",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-changed": "^1.2.1",
@@ -23,6 +52,8 @@
     "gulp-iconfont": "^3.0.2",
     "gulp-imagemin": "^2.3.0",
     "gulp-jade": "^1.0.1",
+    "gulp-jscs": "^1.6.0",
+    "gulp-jshint": "^1.11.1",
     "gulp-minify-css": "^1.2.0",
     "gulp-notify": "^2.2.0",
     "gulp-postcss": "^5.1.9",
@@ -32,6 +63,8 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
     "handlebars": "^3.0.3",
+    "imagemin-pngquant": "^4.1.0",
+    "jshint-stylish": "^2.0.1",
     "karma": "^0.12.37",
     "karma-browserify": "^4.2.1",
     "karma-chrome-launcher": "^0.2.0",
@@ -40,11 +73,18 @@
     "karma-nyan-reporter": "^0.1.0",
     "karma-sinon-chai": "^1.0.0",
     "lodash": "^3.10.0",
+    "lost": "^6.4.0",
     "merge-stream": "^0.1.8",
+    "mithril": "^0.2.0",
     "mocha": "^2.2.5",
     "pretty-hrtime": "^1.0.0",
     "require-dir": "^0.3.0",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.2.3"
+    "watchify": "^3.2.3",
+    "wiredep": "^2.2.2"
+  },
+  "dependencies": {
+    "backbone": "^1.2.1",
+    "jquery": "^2.1.4"
   }
 }
