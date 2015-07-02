@@ -5,5 +5,5 @@ var gulp = require('gulp'),
 gulp.task('jshint', function() {
     return gulp.src('./src/js/*.js')
         .pipe(jshint())
-        .pipe(jshint.reporter(stylish))
+        .pipe(jshint.reporter(stylish));
 });

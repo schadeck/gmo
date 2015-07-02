@@ -42,7 +42,7 @@ var browserifyTask = function(devMode) {
     return mergeStream.apply(gulp, _.map(config.bundleConfigs, browserifyThis));
 };
 gulp.task('browserify', function() {
-    return browserifyTask()
+    return browserifyTask();
 });
 
 module.exports = browserifyTask;
