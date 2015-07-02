@@ -19,6 +19,7 @@ module.exports = {
     // Images
     images: {
         src: src + '/img/*',
+        allsrc: src + '/css/**/*.styl',
         dest: dest + '/img'
     },
 
