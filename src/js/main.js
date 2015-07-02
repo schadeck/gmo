@@ -1,6 +1,5 @@
-var m = require('mithril'),
-    $ = require('jquery');
+var m = require('mithril');
 
-$(document).ready(function() {
-    console.log('test');
-});
+console.log('test');
+
+require('./test.js');
