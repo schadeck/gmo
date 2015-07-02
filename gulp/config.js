@@ -39,6 +39,12 @@ module.exports = {
         }]
     },
 
+    // Vendor
+    vendor: {
+        src: src + '/js/vendor/*.js',
+        dest: dest + '/js/vendor'
+    },
+
     // Production
     production: {
         cssSrc: dest + '/css/*.css',

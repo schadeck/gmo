@@ -2,6 +2,7 @@
     "name": "gmo",
     "version": "0.0.1",
     "license": "MIT",
+    "author": "Meshak Daniel <daniel.meshak@gmail.com>",
     "description": "gulp mithril optimization",
     "repository": {
         "type": "git",

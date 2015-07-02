@@ -1,13 +1,13 @@
 var gulp = require('gulp'),
+    _ = require('lodash'),
+    watchify = require('watchify'),
     browserify = require('browserify'),
     browserSync = require('browser-sync'),
-    watchify = require('watchify'),
     mergeStream = require('merge-stream'),
+    source = require('vinyl-source-stream'),
     bundleLogger = require('../util/bundleLogger'),
     handleErrors = require('../util/handleErrors'),
-    source = require('vinyl-source-stream'),
-    config = require('../config').browserify,
-    _ = require('lodash');
+    config = require('../config').browserify;
 
 var browserifyTask = function(devMode) {
     var browserifyThis = function(bundleConfig) {

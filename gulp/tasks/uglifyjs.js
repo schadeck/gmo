@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     size = require('gulp-filesize'),
-    rename = require('gulp-rename')
+    rename = require('gulp-rename'),
     config = require('../config').production;
 
 gulp.task('uglifyjs', ['browserify'], function() {
