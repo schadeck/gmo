@@ -16,13 +16,13 @@ module.exports = {
     // CSS
     postcss: {
         src: src + '/css/*.styl',
+        allsrc: src + '/css/**/*.styl',
         dest: dest + '/css'
     },
 
     // Images
     images: {
         src: src + '/img/*',
-        allsrc: src + '/css/**/*.styl',
         dest: dest + '/img'
     },
 

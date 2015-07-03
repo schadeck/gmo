@@ -1,11 +1,11 @@
 var m = require('mithril');
 
 module.exports = {
-    controller: function() {
-        var ctrl = this;
-    },
+    // controller: function() {
+    //     var ctrl = this;
+    // },
 
-    view: function(ctrl) {
+    view: function() {
         return [
             m('.container', [
                 m('nav', [
