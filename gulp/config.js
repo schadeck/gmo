@@ -43,6 +43,13 @@ module.exports = {
         }]
     },
 
+    // Wiredep
+    wiredep: {
+        src: src + '/index.jade',
+        dest: src
+    },
+
+
     // Vendor
     vendor: {
         src: src + '/js/vendor/*.js',

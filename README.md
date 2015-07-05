@@ -1,4 +1,4 @@
-Gupl Mithril Optomization
+Gupl Mithril Optimized
 ===
 
 ```
