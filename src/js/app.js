@@ -1,10 +1,10 @@
 var m = require('mithril'),
-    home = require('./pages/home.js'),
-    about = require('./pages/about.js');
+    domready = require('domready'),
+    routes = require('./routes');
 
 m.route.mode = 'pathname';
 
-m.route(document.body, "/", {
-    "/": home,
-    "/about": about
-});
+
+wv = {};
+
+m.route(document.body, '/', routes);

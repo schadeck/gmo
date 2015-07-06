@@ -32,6 +32,24 @@ module.exports = {
         dest: dest
     },
 
+    // IconFont
+
+    iconFonts: {
+        name: 'iconfonts',
+        src: src + '/img/icons/*.svg',
+        dest: dest + '/fonts',
+        stylDest: src + '/css/partials',
+        template: './gulp/tasks/iconFont/template.styl.swig',
+        stylOutputName: '_icons.styl',
+        fontPath: 'fonts',
+        className: 'icon',
+        options: {
+            fontName: 'iconfonts',
+            appendCodepoints: true,
+            normalize: false
+        }
+    },
+
     // Browserify Settings
     browserify: {
         debug: true,
