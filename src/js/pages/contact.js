@@ -1,4 +1,4 @@
-app.pages.about = {
+app.pages.contact = {
     controller: function() {
         return {}
     },
@@ -7,7 +7,7 @@ app.pages.about = {
             m('section', {
                 class: 'content'
             }, [
-                m('h1', ['ABOUT'])
+                m('h1', ['CONTACT'])
             ])
         ]
     }

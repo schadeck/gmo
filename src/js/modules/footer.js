@@ -1,14 +1,12 @@
-var m = require('mithril');
-wv.layout.footer = {
-
+app.mods.footer = {
     controller: function() {
-
+        return {}
     },
     view: function(ctrl) {
         return [
-            m('div', {
+            m('footer', {
                 class: 'footer'
-            })
+            }, ['Footer'])
         ]
     }
 }

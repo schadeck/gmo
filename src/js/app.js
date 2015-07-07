@@ -1,7 +1,14 @@
-var m = require('mithril'),
-    domready = require('domready'),
-    routes = require('./routes');
+m = require('mithril');
+domready = require('domready');
+
+app = {};
+app.dat = {};
+app.mods = {};
+app.pages = {};
+app.comps = {};
+routes = require('./routes');
 
 m.route.mode = 'pathname';
-
-m.route(document.body, '/', routes);
+domready(function() {
+    m.route(document.body, '/', routes);
+});

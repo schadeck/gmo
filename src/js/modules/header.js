@@ -1,14 +1,12 @@
-var m = require('mithril');
-
-wv.layout.nav = {
+app.mods.header = {
     controller: function() {
-
+        return {}
     },
     view: function(ctrl) {
         return [
-            m('div', {
+            m('header', {
                 class: 'header'
-            })
+            }, ['Header'])
         ]
     }
 }
