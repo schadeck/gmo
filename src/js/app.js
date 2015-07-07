@@ -2,7 +2,7 @@ m = require('mithril');
 domready = require('domready');
 
 app = {};
-app.dat = {};
+// app.data = {};
 app.mods = {};
 app.pages = {};
 app.comps = {};
