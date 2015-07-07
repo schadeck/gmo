@@ -4,7 +4,4 @@ var m = require('mithril'),
 
 m.route.mode = 'pathname';
 
-
-wv = {};
-
 m.route(document.body, '/', routes);

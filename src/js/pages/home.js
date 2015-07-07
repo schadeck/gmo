@@ -1,5 +1,5 @@
 var m = require('mithril');
-var header = require('../partials/_header');
+// var header = require('../partials/_header');
 
 module.exports = {
     // controller: function() {
@@ -20,8 +20,7 @@ module.exports = {
                     }, 'about')
                 ]),
                 m('h1', 'HOME'),
-                m('p', 'Welcome to the home page.'),
-                header
+                m('p', 'Welcome to the home page.')
             ])
         ];
     }

@@ -1,21 +1,14 @@
-
 var m = require('mithril');
 
-//model
-var people = [{
-    id: 1,
-    name: "John"
-}, {
-    id: 2,
-    name: "Mary"
-}, {
-    id: 3,
-    name: "Bob"
-}]
+wv.layout.nav = {
+    controller: function() {
 
-
-return m("ul", [
-    people.map(function(person) {
-        return m("li", person.name)
-    })
-])
+    },
+    view: function(ctrl) {
+        return [
+            m('div', {
+                class: 'header'
+            })
+        ]
+    }
+}
