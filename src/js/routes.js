@@ -1,11 +1,9 @@
 var layout = require('./modules/layout'),
 	home = require('./pages/home'),
 	about = require('./pages/about'),
-	about = require('./pages/contact');
-
-
-am = app.mods;
-ap = app.pages;
+	about = require('./pages/contact'),
+    am = app.mods,
+    ap = app.pages;
 
 module.exports = {
     '/': am.layout(ap.home),

@@ -1,3 +1,4 @@
+var m = require('mithril');
 app.pages.contact = {
     controller: function() {
         return {};

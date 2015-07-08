@@ -1,5 +1,5 @@
-m = require('mithril');
-domready = require('domready');
+var m = require('mithril'),
+    domready = require('domready');
 
 app = {};
 // app.data = {};

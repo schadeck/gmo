@@ -1,3 +1,4 @@
+var m = require('mithril');
 var nav = {
     "links": [{
         "order": 1,
