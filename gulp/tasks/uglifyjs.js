@@ -6,9 +6,9 @@ var gulp = require('gulp'),
 
 gulp.task('uglifyjs', ['browserify'], function() {
     return gulp.src(config.jsSrc)
-        .pipe(rename({
-            suffix: '.min'
-        }))
+        // .pipe(rename({
+        //     suffix: '.min'
+        // }))
         .pipe(uglify())
         .pipe(gulp.dest(config.jsDest))
         .pipe(size());

@@ -1,6 +1,6 @@
 app.pages.home = {
     controller: function() {
-        return {}
+        return {};
     },
     view: function(ctrl) {
         return [
@@ -9,6 +9,6 @@ app.pages.home = {
             }, [
                 m('h1', ['HOME'])
             ])
-        ]
+        ];
     }
-}
+};

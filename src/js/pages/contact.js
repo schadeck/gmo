@@ -1,6 +1,6 @@
 app.pages.contact = {
     controller: function() {
-        return {}
+        return {};
     },
     view: function(ctrl) {
         return [
@@ -9,6 +9,6 @@ app.pages.contact = {
             }, [
                 m('h1', ['CONTACT'])
             ])
-        ]
+        ];
     }
-}
+};

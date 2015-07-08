@@ -1,12 +1,12 @@
 app.mods.footer = {
     controller: function() {
-        return {}
+        return {};
     },
     view: function(ctrl) {
         return [
             m('footer', {
                 class: 'footer'
             }, ['Footer'])
-        ]
+        ];
     }
-}
+};

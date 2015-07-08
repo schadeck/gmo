@@ -73,6 +73,9 @@ module.exports = {
         src: src + '/js/vendor/*.js',
         dest: dest + '/js/vendor'
     },
+    jshint: {
+        src: ['./src/js/**/*.js', '!./src/js/vendor/**/*.js']
+    },
 
     // Production
     production: {

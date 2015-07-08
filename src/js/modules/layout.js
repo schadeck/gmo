@@ -8,7 +8,7 @@ app.mods.layout = function(subModule) {
                 subCtrl: new subModule.controller(),
                 headCtrl: new app.mods.header.controller(),
                 footCtrl: new app.mods.footer.controller()
-            }
+            };
         },
         view: function(ctrl) {
             return [
@@ -20,7 +20,7 @@ app.mods.layout = function(subModule) {
                 }, [subModule.view(ctrl.subCtrl)]),
                 //Footer
                 app.mods.footer.view(ctrl.footCtrl)
-            ]
+            ];
         }
-    }
-}
+    };
+};

@@ -20,23 +20,17 @@ app.mods.header = {
         return {
             visible: m.prop(false),
             isActive: function(route) {
-                var mroute = m.route(),
-                    mroute = mroute.split('/'),
-                    mroute = '/' + mroute[1],
-                    active = (route === mroute)
-                return active
+                var active = (route === '/' + m.route().split('/')[1]);
+                return active;
             }
-        }
+        };
     },
     view: function(ctrl) {
         return [
             m('header', {
                 class: 'header'
             }, [
-                m('nav', {
-                    id: 'nt',
-                    class: 'nav'
-                }, [
+                m('nav', [
                     m('ul', {
                             class: 'left no-pm'
                         },
@@ -48,12 +42,12 @@ app.mods.header = {
                                     href: link.path,
                                     class: ctrl.isActive(link.path) ? 'active' : ''
                                 }, link.title)
-                            )
+                            );
                         })
                     )
 
                 ])
             ])
-        ]
+        ];
     }
-}
+};
