@@ -12,3 +12,5 @@ npm start
 To-Do
 =
 - iconfonts
+
+[![Code Climate](https://codeclimate.com/github/shakdaniel/gmo/badges/gpa.svg)](https://codeclimate.com/github/shakdaniel/gmo)
