@@ -1,5 +1,4 @@
-var m = require('mithril');
-module.exports = app.pages.about = {
+app.pages.about = {
     controller: function() {
         return {};
     },

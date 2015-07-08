@@ -1,8 +1,7 @@
-var m = require('mithril');
 var header = require('./header');
 var footer = require('./footer');
 
-module.exports = app.mods.layout = function(subModule) {
+app.mods.layout = function(subModule) {
     return {
         controller: function() {
             return {
