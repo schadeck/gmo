@@ -1,3 +1,5 @@
+var m = require('mithril');
+
 app.pages.home = {
     controller: function() {
         return {};

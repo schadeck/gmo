@@ -1,3 +1,6 @@
+var m = require('mithril');
+
+
 app.pages.about = {
     controller: function() {
         return {};

@@ -1,3 +1,4 @@
+var m = require('mithril');
 var header = require('./header');
 var footer = require('./footer');
 
