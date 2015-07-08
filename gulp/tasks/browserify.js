@@ -34,8 +34,8 @@ var browserifyTask = function(devMode) {
             b.on('update', bundle);
             bundleLogger.watch(bundleConfig.outputName);
         } else {
-            if (bundleConfig.require) b.require(bundleConfig.require);
-            if (bundleConfig.external) b.external(bundleConfig.external);
+            if (bundleConfig.require) {b.require(bundleConfig.require)};
+            if (bundleConfig.external) {b.external(bundleConfig.external)};
         }
         return bundle();
     };
