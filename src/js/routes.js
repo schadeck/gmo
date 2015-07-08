@@ -3,10 +3,8 @@ var layout = require('./modules/layout'),
 	about = require('./pages/about'),
 	contact = require('./pages/contact');
 
-
-am = app.mods;
-ap = app.pages;
-
+var am = app.mods;
+var ap = app.pages;
 module.exports = {
     '/': am.layout(ap.home),
     '/about': am.layout(ap.about),

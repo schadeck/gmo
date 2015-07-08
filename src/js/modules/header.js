@@ -16,7 +16,6 @@ var nav = {
     }]
 };
 
-
 app.mods.header = {
     controller: function() {
         return {

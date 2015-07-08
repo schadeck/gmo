@@ -1,6 +1,6 @@
-var m = require('mithril');
-var header = require('./header');
-var footer = require('./footer');
+var m = require('mithril'),
+    header = require('./header'),
+    footer = require('./footer');
 
 app.mods.layout = function(subModule) {
     return {
