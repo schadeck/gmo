@@ -4,7 +4,7 @@ app.pages.contact = {
     controller: function() {
         return {};
     },
-    view: function(ctrl) {
+    view: function() {
         return [
             m('section', {
                 class: 'content'
