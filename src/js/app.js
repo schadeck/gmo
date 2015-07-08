@@ -1,7 +1,7 @@
 var m = require('mithril'),
 	domready = require('domready');
 
-app = {};
+var app = {};
 // app.data = {};
 app.mods = {};
 app.pages = {};
