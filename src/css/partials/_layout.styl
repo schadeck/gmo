@@ -1,0 +1,213 @@
+html
+    box-sizing: border-box
+*, *:before, *:after
+    box-sizing: inherit
+a
+    text-decoration: none
+input, select
+    outline: none
+
+html,body
+    position: absolute
+    width 100%
+    height 100%
+    font-size 100%
+    font-family 'Gotham', sans-serif
+    letter-spacing .02em
+    font-weight: 200
+header
+    position fixed
+    width 100%
+    z-index 2000
+    line-height: $nav-h
+.logo
+    width: 140px
+    text-align: center
+    height: $nav-h
+    i
+        font-size: $nav-h
+    h1
+        display: none
+.mainnav
+    cf()
+    background #fff
+    text-transform: uppercase
+    > li
+        position: relative
+        fl()
+        a
+            height: $nav-h
+            display: block
+            color $olive
+    .mainlink
+        margin-right 40px
+        > .subnav
+            cf()
+            position: fixed
+            display none
+            width 100%
+            top $nav-h
+            height: $sub-h
+            left 0
+            padding-left: 140px
+            background: rgba($steel,.75)
+            trans(10s, ease)
+            > .active:before,
+            > .active:after
+                content: ''
+                position: absolute
+                height: 6px
+                width: 3000px
+                background #000
+                top: $sub-h
+                background: rgba($steel,.75)
+            > .active:before
+                right: 50%
+                margin-right: 3px
+                transform: skew(-50deg)
+                box-shadow: 1px 1px 1px rgba(#000,.1)
+            > .active:after
+                left: 50%
+                margin-left: 3px
+                transform: skew(50deg)
+                box-shadow: -1px 1px 1px rgba(#000,.1)
+            .sublink
+                margin-right 40px
+                position: relative
+                fl()
+                a
+                    display: block
+                    color: $rain
+                    line-height: 34px
+                    height: 34px
+                    font-size: .8em
+        > .active + .subnav
+            height: $sub-h
+            display: block
+    > li:nth-last-child(-n+2)
+        fr()
+        margin-right 0
+    > .mainlink:nth-child(n+2):nth-child(-n+6)
+        &:after,
+        > .active:after
+            content: '';
+            position: absolute
+            height: 0
+            width: 100%
+            bottom: 10px
+            background: rgba($olive,0)
+            transform: scaleX(0);
+            trans(.1s, ease-in-out)
+        &:hover:after,
+        > .active:after
+            background: rgba($olive,1)
+            height: 2px
+            transform: scaleX(1)
+        > .active:after
+            left: 0
+    .residentportal
+        a
+            color $navy
+            background $steel
+            padding 0 15px
+            trans(.2s, ease-in-out)
+            &:after
+                iconfont()
+                content: "\e608"
+                padding-left: 6px
+                font-weight: bolder
+        a:hover, > .active
+            background: $navy
+            color: $steel
+    .search
+        i
+            font-weight: bolder
+            color #cbcbcb
+            margin-right: -18px
+            padding 10px 0
+        input
+            color: $rain
+            font-size: 16px
+            border: 0 solid #fff
+            width: 20px
+            margin: 0 15px 0 0
+            background: none
+            trans(.25s, ease-in-out)
+            &:focus
+                width: 200px
+                border-bottom: 1px solid $steel
+                background: none
+                margin-left: 20px
+                padding: 4px 0
+footer
+    position: relative
+    background: #fff
+.fsection, .fsection a
+    color $olive
+.fsection
+    cf()
+    text-transform: uppercase
+    padding 64px 64px 44px 64px
+    p
+        font-size: 0
+        line-height: 0
+    h2
+        margin-bottom: 20px
+    > li
+        fl()
+        width: 25%
+        &:first-child
+            width 50%
+.footnav
+    cf()
+    li
+        float: left
+        width 50%
+        margin-bottom: 20px
+.social
+    a
+        height: 20px
+        font-size: 20px
+        display: inline-block
+        margin-right: 20px
+        color: #dedede
+.subscribe
+    form
+        margin-top: 12px
+        input
+            padding: 4px 10px
+            background: none
+            border 1px solid #c9c7c7
+        .email
+            width: 80%
+            font-style: italic
+        .submit
+            width 20%
+            background: #c9c7c7
+            color: #fff
+            text-transform: uppercase
+.copyright
+    height: $nav-h
+    line-height: $nav-h
+    border-top: 1px solid #dedede
+    border-bottom: 1px solid #dedede
+    position: relative
+    padding 0 64px
+    font-size: .8em
+    text-transform: uppercase
+    p, a
+        color: $rain
+    span
+        margin: 0 20px
+
+.content
+    cf()
+    position: relative
+    width 100%
+    background rgba($olive,.3)
+    margin-top: $nav-h
+    > div
+        position: relative
+        cf()
+        position: relative
+        width 100%

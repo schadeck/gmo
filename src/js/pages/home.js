@@ -1,13 +1,14 @@
 var m = require('mithril');
 
-app.pages.home = {
+app.page.home = {
     controller: function() {
         return {};
     },
-    view: function() {
+    view: function(ctrl) {
         return [
             m('section', {
-                class: 'content'
+                class: 'content',
+                config: app.config.pageIn
             }, [
                 m('h1', ['HOME'])
             ])

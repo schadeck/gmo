@@ -16,9 +16,7 @@ app.mods.layout = function(subModule) {
                 // Header
                 app.mods.header.view(ctrl.headCtrl),
                 // Content
-                m('section', {
-                    class: 'content'
-                }, [subModule.view(ctrl.subCtrl)]),
+                subModule.view(ctrl.subCtrl),
                 //Footer
                 app.mods.footer.view(ctrl.footCtrl)
             ];

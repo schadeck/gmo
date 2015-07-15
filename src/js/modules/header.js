@@ -3,15 +3,15 @@ var m = require('mithril');
 var nav = {
     "links": [{
         "order": 1,
-        "path": "\/",
+        "path": "/",
         "title": "Home"
     }, {
         "order": 2,
-        "path": "\/about",
+        "path": "/about",
         "title": "About"
     }, {
         "order": 3,
-        "path": "\/contact",
+        "path": "/contact",
         "title": "Contact"
     }]
 };
@@ -41,7 +41,8 @@ app.mods.header = {
                                 },
                                 m('a', {
                                     href: link.path,
-                                    class: ctrl.isActive(link.path) ? 'active' : ''
+                                    class: ctrl.isActive(link.path) ? 'active' : '',
+                                    config: app.config.pageOut
                                 }, link.title)
                             );
                         })

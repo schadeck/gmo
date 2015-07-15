@@ -4,7 +4,7 @@ var layout = require('./modules/layout'),
 	contact = require('./pages/contact');
 
 var am = app.mods;
-var ap = app.pages;
+var ap = app.page;
 module.exports = {
     '/': am.layout(ap.home),
     '/about': am.layout(ap.about),

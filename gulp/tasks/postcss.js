@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    plumber = require('gulp-plumber'),
     browserSync = require('browser-sync'),
     sourcemaps = require('gulp-sourcemaps'),
     stylus = require('gulp-stylus'),
@@ -10,11 +11,18 @@ var postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer-core'),
     mqpacker = require('css-mqpacker'),
     csswring = require('csswring'),
-    lost = require('lost');
+    lost = require('lost'),
+    doiuse = require('doiuse');
 
 var processors = [
     autoprefixer({
-        browsers: ['last 5 version']
+        browsers: ['> 1%', 'ie >= 9']
+    }),
+    doiuse({
+        browsers: ['ie >= 9'],
+        onFeatureUsage: function(usageInfo) {
+            console.log(usageInfo.message);
+        }
     }),
     mqpacker,
     csswring,
@@ -23,6 +31,7 @@ var processors = [
 
 gulp.task('postcss', function() {
     return gulp.src(config.src)
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(stylus())
         .pipe(postcss(processors))

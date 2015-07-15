@@ -1,16 +1,16 @@
 var m = require('mithril');
 
-app.pages.about = {
+app.page.about = {
     controller: function() {
         return {};
     },
-    view: function() {
+    view: function(ctrl) {
         return [
             m('section', {
-                class: 'content'
+                class: 'content',
+                config: app.config.pageIn
             }, [
-                m('h1', ['ABOUT']),
-                m('p', [new Date().getFullYear()])
+                m('h1', ['ABOUT'])
             ])
         ];
     }

@@ -1,3 +1,3 @@
 var gulp = require('gulp');
 
-gulp.task('default', ['postcss', 'images', 'jade', 'vendor', 'watch']);
+gulp.task('default', ['jade', 'postcss', 'images', 'fonts', 'vendor', 'watch']);

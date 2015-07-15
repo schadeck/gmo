@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    plumber = require('gulp-plumber'),
     jade = require('gulp-jade'),
     browserSync = require('browser-sync'),
     handleErrors = require('../util/handleErrors'),
@@ -7,6 +8,7 @@ var gulp = require('gulp'),
 
 gulp.task('jade', function() {
     return gulp.src(config.src)
+        .pipe(plumber())
         .pipe(jade())
         .on('error', handleErrors)
         .pipe(gulp.dest(config.dest))

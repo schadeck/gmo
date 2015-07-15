@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    plumber = require('gulp-plumber'),
     uglify = require('gulp-uglify'),
     size = require('gulp-filesize'),
     // rename = require('gulp-rename'),
@@ -6,6 +7,7 @@ var gulp = require('gulp'),
 
 gulp.task('uglifyjs', ['browserify'], function() {
     return gulp.src(config.jsSrc)
+        .pipe(plumber())
         // .pipe(rename({
         //     suffix: '.min'
         // }))

@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    plumber = require('gulp-plumber'),
     browserSync = require('browser-sync'),
     imagemin = require('gulp-imagemin'),
     changed = require('gulp-changed'),
@@ -7,6 +8,7 @@ var gulp = require('gulp'),
 
 gulp.task('images', function() {
     return gulp.src(config.src)
+        .pipe(plumber())
         .pipe(changed(config.dest))
         .pipe(imagemin({
             optimizationLevel: 5,

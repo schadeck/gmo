@@ -17,37 +17,27 @@ module.exports = {
     postcss: {
         src: src + '/css/*.styl',
         allsrc: src + '/css/**/*.styl',
-        dest: dest + '/css'
+        dest: dest + '/library/css'
     },
 
     // Images
     images: {
         src: src + '/img/*',
-        dest: dest + '/img'
+        dest: dest + '/library/img'
     },
 
     // HTML
     jade: {
         src: src + '/*.jade',
+        allsrc: src + '/**/*.jade',
         dest: dest
     },
 
     // IconFont
 
-    iconFonts: {
-        name: 'iconfonts',
-        src: src + '/img/icons/*.svg',
-        dest: dest + '/fonts',
-        stylDest: src + '/css/partials',
-        template: './gulp/tasks/iconFont/template.styl.swig',
-        stylOutputName: '_icons.styl',
-        fontPath: 'fonts',
-        className: 'icon',
-        options: {
-            fontName: 'iconfonts',
-            appendCodepoints: true,
-            normalize: false
-        }
+    fonts: {
+        src: src + '/fonts/*',
+        dest: dest + '/library/fonts'
     },
 
     // Browserify Settings
@@ -55,9 +45,8 @@ module.exports = {
         debug: true,
         bundleConfigs: [{
             entries: src + '/js/app.js',
-            dest: dest + '/js',
-            outputName: 'app.js',
-            external: ['jquery']
+            dest: dest + '/library/js',
+            outputName: 'app.js'
         }]
     },
 
@@ -71,7 +60,7 @@ module.exports = {
     // Vendor
     vendor: {
         src: src + '/js/vendor/*.js',
-        dest: dest + '/js/vendor'
+        dest: dest + '/library/js/vendor'
     },
 
     // JsHint
@@ -81,9 +70,9 @@ module.exports = {
 
     // Production
     production: {
-        cssSrc: dest + '/css/*.css',
-        jsSrc: dest + '/js/*.js',
-        cssDest: dest + '/css',
-        jsDest: dest + '/js'
+        cssSrc: dest + '/library/css/*.css',
+        jsSrc: dest + '/library/js/*.js',
+        cssDest: dest + '/library/css',
+        jsDest: dest + '/library/js'
     }
 };

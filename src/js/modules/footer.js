@@ -8,7 +8,11 @@ app.mods.footer = {
         return [
             m('footer', {
                 class: 'footer'
-            }, ['Footer'])
+            }, [
+                m('p', [
+                    '\u00A9' + new Date().getFullYear()
+                ])
+            ])
         ];
     }
 };

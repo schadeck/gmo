@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    plumber = require('gulp-plumber'),
     minifyCSS = require('gulp-minify-css'),
     size = require('gulp-filesize'),
     rename = require('gulp-rename'),
@@ -6,6 +7,7 @@ var gulp = require('gulp'),
 
 gulp.task('minifycss', ['postcss'], function() {
     return gulp.src(config.cssSrc)
+        .pipe(plumber())
         .pipe(rename({
             suffix: '.min'
         }))

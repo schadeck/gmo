@@ -15,7 +15,7 @@ var browserifyTask = function(devMode) {
             _.extend(bundleConfig, watchify.args, {
                 debug: true
             });
-            bundleConfig = _.omit(bundleConfig, ['external', 'require']);
+            bundleConfig = _.omit(bundleConfig, [/*'external',*/ 'require']);
         }
         var b = browserify(bundleConfig);
         var bundle = function() {
@@ -37,9 +37,9 @@ var browserifyTask = function(devMode) {
             if (bundleConfig.require) {
                 b.require(bundleConfig.require);
             }
-            if (bundleConfig.external) {
-                b.external(bundleConfig.external);
-            }
+            // if (bundleConfig.external) {
+            //     b.external(bundleConfig.external);
+            // }
         }
         return bundle();
     };
