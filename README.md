@@ -1,4 +1,4 @@
-Gupl Mithril Optimized
+Gulp Mithril Optimized
 ===
 
 Installation
